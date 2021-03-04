@@ -1,3 +1,4 @@
+"""
 class Computador:
     def __init__(self,marca,memoria_ram,placa_de_video):#__init_ serve para inicializarmos o objeto.
         self.marca = marca
@@ -34,3 +35,14 @@ class Carro:
 Carro1 = Carro('Ferrari','vermelho','280km')
 Carro1.PropriedadesCarro()
 Carro1.Lugares()
+"""
+class Pessoa:
+    def falar(self):
+        print("EU ESTOU FALANDO")
+
+P = Pessoa()
+P.falar()
+
+class DadosPessoa:
+    def __init__(self,nome):
+        pass
