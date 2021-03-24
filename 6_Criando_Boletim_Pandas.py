@@ -1,4 +1,5 @@
 import pandas as pd
+
 boletim = pd.DataFrame({'notas1': [8, 5, 9, 8, 7],
             'notas2': [8, 4, 6, 4, 5],
             'materia': ['bio', 'mat', 'por', 'qui', 'fis']
