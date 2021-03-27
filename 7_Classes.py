@@ -17,7 +17,6 @@ class Individuo:
         self.nome = print(f'Seu nome é {nome}')
         self.idade = print(f'você tem {idade}')
         self.cidade = cidade
-    pass
 
 indi1 = Individuo('Eduardo',54,'Rio')
 indi2 = Individuo('Pamela',29,'Para')
@@ -35,7 +34,7 @@ P.durmir()
 P.falar()
 
 print('----------------------------------------------------------------------------------------------------------------')
-
+"""
 class acoes:
     def estudando(self):
         print('Estudando no momento. Por favor, não me atrapalhe. Obrigado :) ')
@@ -62,3 +61,26 @@ elif resp == 'desocupado':
      humano.desocupado()
 elif resp == 'viajando':
     humano.viajando()
+    
+"""
+
+print('----------------------------------------------------------------------------------------------------------------')
+
+class Filme:
+    def __init__(self,titulo,genero,faixa_etaria,duracao):
+        self.titulo = titulo
+        self.genero = genero
+        self.faixa_etaria = faixa_etaria
+        self.duracao = duracao
+
+    def ExibiInfos(self):
+        print(f'O nome do filme é : {self.titulo}')
+    def duracao_e_idade(self):
+        print(f'O filme tem duracao de {self.duracao} para faixa etária de {self.faixa_etaria} anos')
+
+
+filme1 = Filme('Os Vingadores','Aventura','12','3h e 10min')
+
+filme1.ExibiInfos()
+filme1.duracao_e_idade()
+
