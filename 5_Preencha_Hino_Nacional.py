@@ -1,3 +1,7 @@
+print('De acordo com o site da Terra:\n58,4% dos brasileiros não sabem cantar o hino nacional')
+
+print('Você consegue acertar as palavras com esse teste ? ')
+
 nome1= 'plácidas'
 nome2='retumbante'
 nome3='fúlgidos'
