@@ -1,9 +1,8 @@
+
 print("PARTICIPANTES DO REALITY SHOW")
 print( '- - - ATENÇÃO PARA ALGUNS COMANDOS DURANTE O PROCESSO - - - !!!')
 
 import  time
-
-
 
 time.sleep(2)
 print('SEJA BEM VINDO AO PROCESSO DE SELEÇÃO')
@@ -112,3 +111,12 @@ print('O PROCESSO SERÁ INICIADO EM: ')
 for n in range(10, -1, -1):
     time.sleep(1)
     print(n)
+
+frase = "BIG BROTHER BRASIL"
+
+import sys
+
+for i in list(frase):
+    print(i, end='')
+    sys.stdout.flush()
+    time.sleep(0.25)
