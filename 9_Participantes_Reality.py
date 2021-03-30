@@ -135,7 +135,7 @@ if resp == 0:
 
 else:
     for i in 'NÃO FOI MOISES QUEM CONSTRUIU A ARCA. VOCE ERROU...':
-        print(i, end=' ')
+        print(i, end='')
         time.sleep(0.10)
     lista.remove(usuario.nome)
     escolhido = random.choice(lista)
