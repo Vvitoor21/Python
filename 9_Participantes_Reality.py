@@ -104,9 +104,9 @@ priscila = Pessoa5()
 
 time.sleep(10)
 print('LISTA DE PARTICIPANTES : ')
-
 lista = [ felipe.nome, amanda.nome, arthur.nome, paula.nome, priscila.nome, usuario.nome]
 print(lista)
+
 time.sleep(2)
 print('PRINCIPAIS INFORMAÇÕES ')
 time.sleep(3)
@@ -181,7 +181,7 @@ else:
     lista.remove(random.choice(lista))
     lista.append(usuario.nome)
     time.sleep(2)
-    print(f'O E liminado foi : {escolhido}')
+    print(f'O Eliminado foi : {escolhido}')
     print(f'\nVoltaram :{lista}')
     lista.append(escolhido)
 
@@ -246,6 +246,7 @@ for n in ' - - - 3° E ÚLTIMA PERGUNTA - - - \n':
     print(n, end=' ')
     time.sleep(0.10)
 
+import random
 time.sleep(2)
 print('\nA mãe de Mário tem três filhos. O primeiro se chama Março e o segundo se chama Abril. Qual é o nome do terceiro ?')
 print('Digite 1 - Junho, 2 - Mário, 3 - Maio , 4 - Fevereiro')
@@ -267,26 +268,28 @@ if nome == 2:
     lista.append(usuario.nome)
     time.sleep(3)
     print(f'O ELIMANDO FOI: {eliminado3}')
-    if resp in (1, 3, 4):
-        for n in 'A prória pergunta já diz a resposta...." A mãe de Mário tem três filhos. O primeiro se chama Março e o segundo se chama Abril" ':
-            print(n, end=' ')
-            time.sleep(0.10)
-        time.sleep(3)
-        print('OBVIAMENTE O 3° É MARIO. VOCÊ ERROU !!!! ')
-        lista.remove(usuario.nome)
-        escolhido3 = random.choice(lista)
-        time.sleep(2)
-        print(f'\nO LIDER É: {escolhido3}')
-        lista.remove(escolhido3)
-        lista.append(usuario.nome)
-        time.sleep(2)
-        print(f'\nESTÃO NO PAREDÃO: {lista}')
-        lista.remove(usuario.nome)
-        lista.remove(random.choice(lista))
-        lista.append(usuario.nome)
-        time.sleep(2)
-        print(f'\nVoltaram :{lista}\n')
-        lista.append(escolhido3)
+if nome in(1,3,4):
+    for n in 'A prória pergunta já diz a resposta...." A mãe de Mário tem três filhos. O primeiro se chama Março e o segundo se chama Abril\n" ':
+        print(n, end=' ')
+        time.sleep(0.10)
+    time.sleep(3)
+    print('OBVIAMENTE O 3° É MARIO. VOCÊ ERROU !!!! ')
+    lista.remove(usuario.nome)
+    escolhido3 = random.choice(lista)
+    time.sleep(2)
+    print(f'\nO LIDER É: {escolhido3}')
+    lista.remove(escolhido3)
+    lista.append(usuario.nome)
+    time.sleep(2)
+    print(f'\nESTÃO NO PAREDÃO: {lista}')
+    lista.remove(usuario.nome)
+    lista.remove(random.choice(lista))
+    lista.append(usuario.nome)
+    time.sleep(2)
+    print(f'\nVoltaram :{lista}\n')
+    lista.append(escolhido3)
+
+quit()
 
 print(f'\nJOGAM A FINAL: {lista}')
 time.sleep(5)
