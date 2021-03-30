@@ -72,7 +72,7 @@ amanda = Pessoa2()
 arthur = Pessoa3()
 paula = Pessoa4()
 
-time.sleep(6)
+time.sleep(10)
 print('LISTA DE PARTICIPANTES : ')
 
 lista = [ amanda.nome, arthur.nome, paula.nome, usuario.nome]
@@ -109,21 +109,37 @@ print('\nProva do lider!!!')
 time.sleep(2)
 print('Todos jogam nessa rodada')
 
-for i in 'PERGUNTA:':
-    print(i, end='')
+for i in 'PERGUNTA :':
+    print(i, end=' ')
     time.sleep(0.40)
 
 import random
 
-resp = input('\nQuantos animais de cada espécie, Moisés colocou em sua arca: 1, 2 ou 3? DIGITE O NUMERO')
+print('\nQuantos animais de cada espécie, Moisés colocou em sua arca: 1, 2 ou 3? DIGITE O NUMERO ')
+
+resp = int(input())
 
 if resp == 0:
-    print('VOCCÊ É O LIDER !!!!')
+    time.sleep(3)
+    print('VOCCÊ È O LIDER E ESTÁ NA GRANDE FINAL !!!!\n')
+    lista.remove(usuario.nome)
+    eliminado = random.choice(lista)
+    time.sleep(3)
+    print(f'O ÚLTIMO PAREDÃO ESTÁ ENTRE: {lista}\n')
+    lista.remove(eliminado)
+    lista.append(usuario.nome)
+    time.sleep(3)
+    print(f'O ELIMANDO FOI: {eliminado}')
+    time.sleep(2)
+    print(f' A FIINA ESTÁ ENTRE: {lista} ')
+
 else:
     for i in 'NÃO FOI MOISES QUEM CONSTRUIU A ARCA. VOCE ERROU...':
-        print(i, end='')
+        print(i, end=' ')
         time.sleep(0.10)
+    lista.remove(usuario.nome)
     escolhido = random.choice(lista)
+    lista.append(usuario.nome)
     time.sleep(2)
     print(f'\nO LIDER É: {escolhido}')
     lista.remove(escolhido)
@@ -132,10 +148,9 @@ else:
     lista.remove(random.choice(lista))
     time.sleep(2)
     print(f'\nVoltaram :{lista}')
+    lista.append(escolhido)
 
-lista.append(escolhido)
 print(f'\nJOGAM A FINAL: {lista}')
-
 time.sleep(5)
 print('\nPESSOAS ESTÃO VOTANDO...')
 for n in range(20,10,-1):
@@ -149,7 +164,7 @@ for n in range(10,0,-1):
     print(n)
 
 for l in 'O VENCEDOR É : : : : : : : : :':
-    print(l, end='')
+    print(l, end=' ')
     time.sleep(0.25)
 vencedor = random.choice(lista)
 
