@@ -1,6 +1,4 @@
-
 print("PARTICIPANTES DO REALITY SHOW")
-print( '- - - ATENÇÃO PARA ALGUNS COMANDOS DURANTE O PROCESSO - - - !!!')
 
 import  time
 
@@ -20,18 +18,6 @@ class Usuario:
         self.nome = nome
         self.idade = idade
         self.profissao = prof
-
-    def mostra_informacoes(self):
-        print(self.nome, str(self.idade)+' anos',' profissao: '+ self.profissao)
-
-    def __repr__(self):
-        return str(self.__dict__)
-
-class Pessoa:
-    def __init__(self):
-        self.nome = 'Vitor'
-        self.idade = 22
-        self.profissao = 'Programador'
 
     def mostra_informacoes(self):
         print(self.nome, str(self.idade)+' anos',' profissao: '+ self.profissao)
@@ -82,7 +68,6 @@ print(f'Muito prazer {usuario.nome}. Você tem {usuario.idade} anos  e trabalha 
 
 print('----------------------------------------------------------------------------------')
 
-vitor = Pessoa()
 amanda = Pessoa2()
 arthur = Pessoa3()
 paula = Pessoa4()
@@ -90,23 +75,21 @@ paula = Pessoa4()
 time.sleep(6)
 print('LISTA DE PARTICIPANTES : ')
 
-lista = [ vitor.nome, amanda.nome, arthur.nome, paula.nome,usuario.nome ]
+lista = [ amanda.nome, arthur.nome, paula.nome, usuario.nome]
 print(lista)
 time.sleep(2)
 print('PRINCIPAIS INFORMACOES')
-time.sleep(4)
-vitor.mostra_informacoes()
-time.sleep(4)
+time.sleep(2)
 amanda.mostra_informacoes()
-time.sleep(4)
+time.sleep(2)
 arthur.mostra_informacoes()
-time.sleep(4)
+time.sleep(2)
 paula.mostra_informacoes()
-time.sleep(4)
+time.sleep(2)
 usuario.mostra_informacoes()
 
 time.sleep(2)
-print('O PROCESSO SERÁ INICIADO EM: ')
+print('CONTAGEM REGRESSIVA: ')
 
 for n in range(10, -1, -1):
     time.sleep(1)
@@ -120,3 +103,67 @@ for i in list(frase):
     print(i, end='')
     sys.stdout.flush()
     time.sleep(0.25)
+
+time.sleep(2)
+print('\nProva do lider!!!')
+time.sleep(2)
+print('Todos jogam nessa rodada')
+
+for i in 'PERGUNTA:':
+    print(i, end='')
+    time.sleep(0.40)
+
+import random
+
+resp = input('\nQuantos animais de cada espécie, Moisés colocou em sua arca: 1, 2 ou 3? DIGITE O NUMERO')
+
+if resp == 0:
+    print('VOCCÊ É O LIDER !!!!')
+else:
+    for i in 'NÃO FOI MOISES QUEM CONSTRUIU A ARCA. VOCE ERROU...':
+        print(i, end='')
+        time.sleep(0.10)
+    escolhido = random.choice(lista)
+    time.sleep(2)
+    print(f'\nO LIDER É: {escolhido}')
+    lista.remove(escolhido)
+    time.sleep(2)
+    print(f'\nESTÃO NO PAREDÃO: {lista}')
+    lista.remove(random.choice(lista))
+    time.sleep(2)
+    print(f'\nVoltaram :{lista}')
+
+lista.append(escolhido)
+print(f'\nJOGAM A FINAL: {lista}')
+
+time.sleep(5)
+print('\nPESSOAS ESTÃO VOTANDO...')
+for n in range(20,10,-1):
+    time.sleep(1)
+    print(n)
+print('\nVOTAÇÃO ENCERRADA...')
+time.sleep(5)
+print('FAZENDO A CONTAGEM DOS VOTOS...')
+for n in range(10,0,-1):
+    time.sleep(1)
+    print(n)
+
+for l in 'O VENCEDOR É : : : : : : : : :':
+    print(l, end='')
+    time.sleep(0.25)
+vencedor = random.choice(lista)
+
+print(f'\n{vencedor} !!!!! PARABÉNS. 1,5 MILHÕES DE REAIS !!!')
+
+
+
+
+
+
+
+
+
+
+
+
+
