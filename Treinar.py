@@ -154,16 +154,3 @@ for l in 'O VENCEDOR É : : : : : : : : :':
 vencedor = random.choice(lista)
 
 print(f'\n{vencedor} !!!!! PARABÉNS. 1,5 MILHÕES DE REAIS !!!')
-
-
-
-
-
-
-
-
-
-
-
-
-
