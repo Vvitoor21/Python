@@ -25,6 +25,18 @@ class Usuario:
     def __repr__(self):
         return str(self.__dict__)
 
+class Pessoa1:
+    def __init__(self):
+        self.nome = 'Felipe'
+        self.idade = 29
+        self.profissao = 'Professor'
+
+    def mostra_informacoes(self):
+        print(self.nome, str(self.idade)+' anos',' profissao: '+ self.profissao)
+
+    def __repr__(self):
+        return str(self.__dict__)
+
 class Pessoa2:
     def __init__(self):
         self.nome = 'Amanda'
@@ -68,6 +80,7 @@ print(f'Muito prazer {usuario.nome}. Você tem {usuario.idade} anos  e trabalha 
 
 print('----------------------------------------------------------------------------------')
 
+felipe = Pessoa1()
 amanda = Pessoa2()
 arthur = Pessoa3()
 paula = Pessoa4()
@@ -75,10 +88,12 @@ paula = Pessoa4()
 time.sleep(10)
 print('LISTA DE PARTICIPANTES : ')
 
-lista = [ amanda.nome, arthur.nome, paula.nome, usuario.nome]
+lista = [ felipe.nome, amanda.nome, arthur.nome, paula.nome, usuario.nome]
 print(lista)
 time.sleep(2)
 print('PRINCIPAIS INFORMACOES')
+time.sleep(3)
+felipe.mostra_informacoes()
 time.sleep(2)
 amanda.mostra_informacoes()
 time.sleep(2)
@@ -109,7 +124,7 @@ print('\nProva do lider!!!')
 time.sleep(2)
 print('Todos jogam nessa rodada')
 
-for i in 'PERGUNTA :':
+for i in ' - - - 1° PERGUNTA - - - :':
     print(i, end=' ')
     time.sleep(0.40)
 
@@ -121,17 +136,15 @@ resp = int(input())
 
 if resp == 0:
     time.sleep(3)
-    print('VOCCÊ È O LIDER E ESTÁ NA GRANDE FINAL !!!!\n')
+    print('VOCCÊ É O LIDER DA RODADA !!!!\n')
     lista.remove(usuario.nome)
     eliminado = random.choice(lista)
     time.sleep(3)
-    print(f'O ÚLTIMO PAREDÃO ESTÁ ENTRE: {lista}\n')
+    print(f'O PAREDÃO ESTÁ ENTRE: {lista}\n')
     lista.remove(eliminado)
     lista.append(usuario.nome)
-    time.sleep(3)
+    time.sleep(6)
     print(f'O ELIMANDO FOI: {eliminado}')
-    time.sleep(2)
-    print(f' A FIINA ESTÁ ENTRE: {lista} ')
 
 else:
     for i in 'NÃO FOI MOISES QUEM CONSTRUIU A ARCA. VOCE ERROU...':
@@ -151,6 +164,64 @@ else:
     time.sleep(2)
     print(f'\nVoltaram :{lista}')
     lista.append(escolhido)
+
+time.sleep(3)
+print(f'SEGUEM NO JOGO: {lista}')
+
+for i in ' - - - 2° PERGUNTA - - - :':
+    print(i, end=' ')
+    time.sleep(0.40)
+
+time.sleep(2)
+print('ATENÇÃO\n')
+time.sleep(2)
+print('No dia 7 de setembro, nós comemoramos o Dia da Independência no Brasil.'
+      'Em Portugal, também existe 7 de setembro ??? \n')
+
+time.sleep(7)
+print('DIGITE 1 PARA SIM E 2 PARA NÃO')
+dia = int(input())
+
+if dia == 1:
+    print('Você é esperto. E agora é o líder !!!')
+    time.sleep(3)
+    print('Vamos deixar os proximos 3 participantes enfrentarem o paredão...')
+    lista.remove(usuario.nome)
+    eliminado2 = random.choice(lista)
+    time.sleep(3)
+    print(f'O PAREDÃO ESTÁ ENTRE: {lista}\n')
+    lista.remove(eliminado2)
+    lista.append(usuario.nome)
+    time.sleep(3)
+    print(f'O ELIMANDO FOI: {eliminado2}')
+else:
+    for i in ' Claro que sim, bem como nos Estados Unidos, na Espanha, na Austrália... '\
+             'Basta olhar o calendário desses países e reparar que 7 de setembro estará lá, assim como todos os outros dias do ano':
+        print(i, end='')
+        time.sleep(0.10)
+
+    time.sleep(5)
+    print('VOCÊ ERROU !!!! ')
+    lista.remove(usuario.nome)
+    escolhido2 = random.choice(lista)
+    time.sleep(2)
+    print(f'\nO LIDER É: {escolhido2}')
+    lista.remove(escolhido2)
+    lista.append(usuario.nome)
+    time.sleep(2)
+    print(f'\nESTÃO NO PAREDÃO: {lista}')
+    lista.remove(usuario.nome)
+    lista.remove(random.choice(lista))
+    lista.append(usuario.nome)
+    time.sleep(2)
+    print(f'\nVoltaram :{lista}\n')
+    lista.append(escolhido2)
+    print('TEM SORTE DE AINDA NÃO TER SIDO ELIMINADO')
+
+
+time.sleep(3)
+print(f'SEGUEM NO JOGO:{lista}')
+
 
 print(f'\nJOGAM A FINAL: {lista}')
 time.sleep(5)
