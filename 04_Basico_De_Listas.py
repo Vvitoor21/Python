@@ -31,3 +31,7 @@ print(numeros)
 conta=[0,1,2,3]
 conta.reverse() # Comando reverse inverte a lista.
 print(conta)
+
+motos =['honda', 'yamaha', 'suzuki']
+motos.insert(0,'ducati')
+print(motos)
