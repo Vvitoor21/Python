@@ -27,3 +27,15 @@ print(list_comp)
 
 for value in range(1, 5):
     print(str(value)+'---'+str(value+1))
+    
+for value in range(1, 21):
+    print(value)
+
+#for num in range(0, 1000001):
+ #   print(num)
+
+lista = list(range(0,1000001))
+#print(lista)
+print(min(lista))
+print(max(lista))
+print(sum(lista))
