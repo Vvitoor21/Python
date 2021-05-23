@@ -24,3 +24,6 @@ print(sum(digitos))
 list_comp = [ valor+10 for valor in range(0, 101, 10)]
 list_comp.remove(110)
 print(list_comp)
+
+for value in range(1, 5):
+    print(str(value)+'---'+str(value+1))
