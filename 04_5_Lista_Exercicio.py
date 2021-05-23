@@ -39,3 +39,14 @@ lista = list(range(0,1000001))
 print(min(lista))
 print(max(lista))
 print(sum(lista))
+
+for n in range(3,31,3):
+    print(n)
+# multiplos de 3
+
+for c in range(1,11):
+    print(c**3)
+# elevado ao cubo
+
+lista = [a**3 for a in range(1,11)]
+print(lista)
