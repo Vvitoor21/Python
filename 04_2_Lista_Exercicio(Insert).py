@@ -52,3 +52,9 @@ print(f'O encontro será entre: {pessoas_jantar[0]} e {pessoas_jantar[1]}')
 del pessoas_jantar[1]  # O parâmetro elimina a quantidade.
 
 print(f'Só esteve presente: {pessoas_jantar[0]}')
+
+list = ['a', 'b', 'a', 'c']
+
+list = [9 if i =='a' else i for i in list]
+
+print(list)
