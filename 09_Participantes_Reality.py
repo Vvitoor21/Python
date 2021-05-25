@@ -312,3 +312,16 @@ vencedor = random.choice(lista)
 
 time.sleep(4)
 print(f'\n{vencedor} !!!!! PARABÉNS. 1,5 MILHÕES DE REAIS !!!')
+
+
+"""def acerto():
+    time.sleep(3)
+    print('VOCÊ É O LIDER DA RODADA !!!!\n')
+    lista.remove(usuario.nome)
+    eliminado = random.choice(lista)
+    time.sleep(3)
+    print(f'O PAREDÃO ESTÁ ENTRE: {lista}\n')
+    lista.remove(eliminado)
+    lista.append(usuario.nome)
+    time.sleep(6)
+    print(f'O ELIMANDO FOI: {eliminado}')"""
