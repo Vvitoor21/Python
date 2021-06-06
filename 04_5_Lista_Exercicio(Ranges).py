@@ -50,3 +50,6 @@ for c in range(1,11):
 
 lista = [a**3 for a in range(1,11)]
 print(lista)
+
+print(2 in digitos)
+#>>>True
