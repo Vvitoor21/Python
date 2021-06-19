@@ -15,3 +15,13 @@ Alexandre = Pessoa1()
 
 dados.loc[0,'Nome':'Após o Prêmio'] = Alexandre.nome,Alexandre.idade,Alexandre.profissao,Alexandre.motivo,Alexandre.dinheiro
 dados
+
+# Alterando nomes de colunas em um DataFrame com Pandas
+
+mapa = { 
+    "home" : "principal",
+    "how_it_works" : "como_funciona",
+    "contact" : "contato",
+    "bought" : "comprou"
+}
+dados = dados.rename(columns = mapa)
