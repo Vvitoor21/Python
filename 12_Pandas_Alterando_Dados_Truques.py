@@ -25,3 +25,12 @@ mapa = {
     "bought" : "comprou"
 }
 dados = dados.rename(columns = mapa)
+
+pd.set_option('display.max_rows',1000) #mostra mais linhas
+pd.set_option('display.max_columns',1000) #mostra mais colunas
+
+dataset.dtypes # mostra os tipos de dados do dataframe
+
+
+
+
