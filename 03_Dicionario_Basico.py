@@ -19,3 +19,10 @@ del months['Jan']
 
 print(months)
 print(months.items())
+
+dict = { 'a': 10, 'b':20, 'c':30}
+
+letras =['a','b','c','d']
+numeros =[5 , 10, 15, 20]
+
+dados_dic = dict(letras,numeros)
