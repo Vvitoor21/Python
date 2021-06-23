@@ -26,3 +26,9 @@ letras =['a','b','c','d']
 numeros =[5 , 10, 15, 20]
 
 dados_dic = dict(letras,numeros)
+
+dict.update({'a':100,'e':25})
+
+dadosCopy = dict.copy()
+
+dict.clear()
