@@ -31,6 +31,8 @@ pd.set_option('display.max_columns',1000) #mostra mais colunas
 
 dataset.dtypes # mostra os tipos de dados do dataframe
 
+dataset.fillna(0, inplace = True)
+
 
 
 
