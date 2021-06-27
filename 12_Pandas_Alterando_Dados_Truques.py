@@ -33,6 +33,9 @@ dataset.dtypes # mostra os tipos de dados do dataframe
 
 dataset.fillna(0, inplace = True)
 
+dataset.mean() # Pegar a media de todas as colunas
+
+datase.groupby(['Sexo']).mean() # Selecionando médias de colunas com agrupamentos
 
 
 
