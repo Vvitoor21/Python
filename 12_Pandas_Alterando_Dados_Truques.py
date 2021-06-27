@@ -37,5 +37,7 @@ dataset.mean() # Pegar a media de todas as colunas
 
 datase.groupby(['Sexo']).mean() # Selecionando médias de colunas com agrupamentos
 
+dataset.Coluna.median() # Calcula a mediana
+
 
 
