@@ -41,4 +41,15 @@ dataset.Coluna.median() # Calcula a Mediana
 
 dataset.mode() # Calcula o valor mais frequente Moda
 
+for index, row in dataframe.iterrows():
+    if dataframe['Sexo'] = 'f':
+        dataframe['Sexo'] = 1:
+            else dataframe['Sexo'] = 0
+         
+dfsexo = {'M':1,'F':0}
+
+dataframe['Sexo'] = dataframe['Sexo'].map(dfsexo)
+            
+        
+
 
