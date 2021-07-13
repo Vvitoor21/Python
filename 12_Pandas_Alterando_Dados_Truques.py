@@ -33,6 +33,9 @@ dataset.dtypes # mostra os tipos de dados do dataframe
 
 dataset.fillna(0, inplace = True)
 
+distribuicao_freq_quantitativa = pd.DataFrame({'Frequencia':frequencia_01, 'Porcentual':porcentual_01})
+distribuicao_freq_quantitativa.rename_axis('Rendas', axis = 'columns', inplace = True)
+distribuicao_freq_quantitativa.reset_index() # Restaurando index de um DataFrame
 dataset.mean() # Pegar a media de todas as colunas
 
 datase.groupby(['Sexo']).mean() # Selecionando médias de colunas com agrupamentos
