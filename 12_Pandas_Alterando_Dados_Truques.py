@@ -52,6 +52,8 @@ for index, row in dataframe.iterrows():
 dfsexo = {'M':1,'F':0}
 
 dataframe['Sexo'] = dataframe['Sexo'].map(dfsexo)
+
+dataframe.to_csv('C:\user\vitor...') # salvando dataframe em formato csv
             
         
 
