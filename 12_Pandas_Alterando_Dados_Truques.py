@@ -56,5 +56,19 @@ dataframe['Sexo'] = dataframe['Sexo'].map(dfsexo)
 dataframe.to_csv('C:\user\vitor...') # salvando dataframe em formato csv
             
         
-
+dados.rename(column = {})
+dados.rename(index = {})
+dados.columns.name =
+dados.reset_index()
+crosstab(dados.Coluna1, dados.Coluna2)
+crosstab(dados.Coluna1, dados.Coluna2, aggfunc = 'mean', values = dados.Coluna3)
+dados.map()
+dados['Coluna'].value_counts()
+dados.shape
+dados.rename_axis('Titulo', axis = 'columns')
+dados.mean()
+dados.mode()
+dados.median()
+dados.describe()
+dados.mean()
 
