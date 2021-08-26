@@ -13,3 +13,13 @@ print(f'{num} * 7  : {num * 7}')
 print(f'{num} * 8  : {num * 8}')
 print(f'{num} * 9  : {num * 9}')
 print(f'{num} * 10 : {num *10}')
+
+#WHILE
+
+num=int(input('Digite um número para saber o resultado na calculadora: '))
+
+n = 0
+
+while n <= 10:
+    print(f'{n} x {num} = {n*num}')
+    n = n + 1
