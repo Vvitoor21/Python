@@ -16,5 +16,3 @@ for index, row in boletim.iterrows():
        boletim.loc[index, 'situacao'] = 'REPROVADO'
    else:
        boletim.loc[index, 'situacao'] = 'APROVADO'
-
-print(boletim)
