@@ -84,3 +84,33 @@ filme1 = Filme('Os Vingadores','Aventura','12','3h e 10min')
 filme1.ExibiInfos()
 filme1.duracao_e_idade()
 
+class Pessoa:   # NOME, IDADE, CIDADE
+    def __init__(self):
+        self.nome = 'Vitor'
+        self.idade = 22
+        self.cidade = 'Sao Paulo'
+
+vitor = Pessoa()
+
+print(vitor.nome)
+print(vitor.idade)
+print(vitor.cidade)
+
+class Individuo:
+    def __init__(self, nome, idade, cidade):
+        self.nome = print(f'Seu nome é {nome}')
+        self.idade = print(f'você tem {idade} anos')
+        self.cidade = print(f'Você mora no(a) {cidade}:')
+
+indi1 = Individuo('Eduardo',54,'Rio')
+
+
+class Humano:
+    def __init__(self):
+        self.nome = input('Seu nome é ')
+        self.idade = input('você tem ')
+        self.cidade = input('Você mora no(a)')
+
+human = Humano()
+print(human.nome)
+
