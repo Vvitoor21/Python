@@ -1,73 +1,5 @@
-def prova1():
-    nome1 = 'plácidas'
-    nome2 ='retumbante'
-    nome3 ='fúlgidos'
-    nome4 ='instante'
-
-    musica =''
-
-    while musica !=  nome1:
-        musica=input('Ouviram do ipiranga as margens: ')
-        if musica != nome1:
-            print('errado')
-
-    while musica != nome2:
-        musica = input('De um povo heróico o brado: ')
-        if musica != nome2:
-            print('errado')
-
-    while musica != nome3:
-        musica = input('E o sol da liberdade em raios: ')
-        if musica != nome3:
-            print('errado')
-
-    while musica != nome4:
-        musica = input('Brilho no céu da pátria nesse: ')
-        if musica != nome4:
-            print('errado')
-
-    print('---------HINO NACIONAL---------')
-    print(f'0uviram do ipiranga as margens {nome1}.')
-    print(f'De um povo heroico o brado {nome2}.')
-    print(f'E o sol da liberdade em raios {nome3}.')
-    print(f'Brilhou no céu da pátria nesse {nome4}.')
-
 import time
-
-time.sleep(5)
-print('SEJA BEM VINDO AO PROCESSO DE SELEÇÃO')
-time.sleep(5)
-print('Antes de começarmos, precisamos  saber mais sobre você. Por favor, insira as seguintes informações: ')
-
-print('Informe somente o seu primeiro  nome: ')
-nome = str(input())
-
-print('Informe a sua idade')
-idade = int(input())
-
-print('Informe a sua profissao')
-prof = input()
-
-print('Por que você quer entrar no Reality Show ?')
-motivo = input()
-
-print('O que você faria com 1,5 milhão de reais ? Escreva tudo !!! ')
-salario = input()
-print('  - - - Agradecemos pela inscrição - - - ')
-time.sleep(5)
-print('Vamos avaliar e analisar as suas respostas e em breve, entraremos em contato...')
-time.sleep(5)
-print('Estamos comparandos os seus dados com outros candidatos')
-
-for i in 'Aguarde . . . . . . . . . . . . . . . . . . Status: Verificado ! \n':
-    print(i, end='')
-    time.sleep(0.25)
-
-time.sleep(3)
-print('PARABÉNS !!!! VOCÊ FOI SELECIONADO E SERÁ UNS DOS 5 PARTICIPANTES DO PROGRAMA :D ')
-time.sleep(3)
-print('Aqui estão algumas informações sobre os outros participantes para que você não entre desatualizado ;) ')
-time.sleep(5)
+import random
 
 class Pessoa1:
     def __init__(self):
@@ -113,10 +45,35 @@ class Pessoa4:
     def mostra_informacoes(self):
         print('Nome: '+self.nome, ' / Idade: '+str(self.idade) + ' anos', ' / Profissão: ' + self.profissao,' / Motivos: '+self.motivo,' / Com o prêmio: '+self.dinheiro)
 
+class Usuario:
+    def __init__(self):
+        self.nome = input('Seu nome é ')
+        self.idade = input('você tem: ')
+        self.profissao = input('Você é:')
+        self.motivo = input('Seu motivo: ')
+        self.salario = input('Seu objetivo com o prêmio:')
+
+
 Alexandre = Pessoa1()
 Paula = Pessoa2()
 Joao = Pessoa3()
 Marcela = Pessoa4()
+usuario = Usuario()
+
+time.sleep(5)
+print('Vamos avaliar e analisar as suas respostas e em breve, entraremos em contato...')
+time.sleep(5)
+print('Estamos comparandos os seus dados com outros candidatos')
+
+for i in 'Aguarde . . . . . . . . . . . . . . . . . . Status: Verificado ! \n':
+    print(i, end='')
+    time.sleep(0.25)
+
+time.sleep(3)
+print('PARABÉNS !!!! VOCÊ FOI SELECIONADO E SERÁ UNS DOS 5 PARTICIPANTES DO PROGRAMA :D ')
+time.sleep(3)
+print('Aqui estão algumas informações sobre os outros participantes para que você não entre desatualizado ;) ')
+time.sleep(5)
 
 lista = [Alexandre, Paula, Joao, Marcela]
 
@@ -126,9 +83,9 @@ for nome in lista:
 
 print('Seus principais objetivos:')
 time.sleep(3)
-print(motivo)
+print(usuario.motivo)
 time.sleep(3)
-print(salario)
+print(usuario.salario)
 
 print('Muito bem. O jogo ira começar em: ')
 time.sleep(2)
@@ -136,7 +93,118 @@ for i in range(10,-1,-1):
     time.sleep(1)
     print(i)
 
-prova1()
+tentativa = 5
+
+def nome1():
+    nome1 = 'plácidas'
+    musica = ''
+    global tentativa
+
+    while musica != nome1:
+        musica = input('Ouviram do ipiranga as margens: ')
+        if musica != nome1:
+            print('errado')
+            tentativa = tentativa - 1
+            print(f'Voce tem {tentativa} chances')
+            if tentativa == 0:
+                print('Chances acabaram')
+                break
+def nome2():
+    nome2 = 'retumbante'
+    musica = ''
+    global tentativa
+
+    while musica != nome2:
+        musica = input('De um povo heroico o brado: ')
+        if musica != nome2:
+            print('errado')
+            tentativa = tentativa - 1
+            print(f'Voce tem {tentativa} chances')
+            if tentativa == 0:
+                print('Chances acabaram')
+                break
+def nome3():
+    nome3 = 'fúlgidos'
+    musica = ''
+    global tentativa
+
+    while musica != nome3:
+        musica = input('E o sol da liberdade em raios: ')
+        if musica != nome3:
+            print('errado')
+            tentativa = tentativa - 1
+            print(f'Voce tem {tentativa} chances')
+            if tentativa == 0:
+                print('Chances acabaram')
+                break
+def nome4():
+    nome4 = 'instante'
+    musica = ''
+    global tentativa
+
+    while musica != nome4:
+        musica = input('Brihou no céu da pátria nesse: ')
+        if musica != nome4:
+            print('errado')
+            tentativa = tentativa - 1
+            print(f'Voce tem {tentativa} chances')
+            if tentativa == 0:
+                print('Chances acabaram')
+                break
+
+nome1()
+
+if tentativa > 0:
+    nome2()
+else:
+    print('.')
+
+if tentativa > 0:
+    nome3()
+else:
+    print('.')
+
+if tentativa > 0:
+    nome4()
+else:
+    print('.')
+
+print(f'Sua pontuação total:{tentativa} pontos')
+lista =['Pamela','Michele','Marcos','Antonio',usuario.nome]
+
+if tentativa != 0:
+    time.sleep(3)
+    print('VOCÊ NÃO FOI TÃO RUIM !!!!\n')
+    lista.remove(usuario.nome)
+    eliminado = random.choice(lista)
+    time.sleep(3)
+    print(f'O PAREDÃO ESTÁ ENTRE: {lista}\n')
+    lista.remove(eliminado)
+    lista.append(usuario.nome)
+    time.sleep(6)
+    print(f'O ELIMANDO FOI: {eliminado}')
+
+else:
+    for i in 'NÃO FOI MOISES QUEM CONSTRUIU A ARCA. VOCE ERROU...':
+        print(i, end='')
+        time.sleep(0.10)
+    lista.remove(usuario.nome)
+    escolhido = random.choice(lista)
+    time.sleep(2)
+    print(f'\nO LIDER É: {escolhido}')
+    lista.remove(escolhido)
+    lista.append(usuario.nome)
+    time.sleep(2)
+    print(f'\nESTÃO NO PAREDÃO: {lista}')
+    lista.remove(usuario.nome)
+    lista.remove(random.choice(lista))
+    lista.append(usuario.nome)
+    time.sleep(2)
+    print(f'O Eliminado foi : {escolhido}')
+    print(f'\nVoltaram :{lista}')
+    lista.append(escolhido)
+
+print(f'Participantes restantes: {lista}')
 
 
 
