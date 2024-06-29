@@ -1,5 +1,6 @@
+#Criando uma Calculadora
 
-num=int(input('Digite um número para saber o resultado na calculadora: '))
+num = int(input('Digite um número para saber o resultado na calculadora: '))
 
 print(f'TABUADA DO NÚMERO {num}.')
 
@@ -16,7 +17,7 @@ print(f'{num} * 10 : {num *10}')
 
 #WHILE
 
-num=int(input('Digite um número para saber o resultado na calculadora: '))
+num = int(input('Digite um número para saber o resultado na calculadora: '))
 
 n = 0
 
